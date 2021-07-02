@@ -19,10 +19,9 @@ class Direction(Enum):
 
 
 class Room(MapSite):
-    sides: List[List[MapSite]] = [[], [], [], []]
-
     def __init__(self, room_no: int):
         self.room_no: int = room_no
+        self.sides: List[List[MapSite]] = [[], [], [], []]
 
     def get_side(self, direction: Direction) -> MapSite:
         return self.sides[direction.value][0]
@@ -50,7 +49,8 @@ class Door(MapSite):
 
 
 class Maze:
-    rooms = []
+    def __init__(self):
+        self.rooms = []
 
     def add_room(self, room: Room):
         self.rooms.append(room)

@@ -32,7 +32,7 @@ class MazeGame:
         return Wall()
 
     def make_door(self, r1: Room, r2: Room) -> Door:
-        Door(r1, r2)
+        return Door(r1, r2)
 
 
 class BombedWall(Wall):
