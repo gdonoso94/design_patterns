@@ -35,3 +35,8 @@ create different representations.
     * the algorithm for creating a complex object sholud be independent of the parts that make up the object and 
     how they're assembled
     * the construction process must allow different representations for the object that is constructed
+  
+### Factory method
+
+* Defines an interface for creating an object, but let subclasses decide which class to instantiate. 
+Factory method lets a class defer instantiation to subclasses.
